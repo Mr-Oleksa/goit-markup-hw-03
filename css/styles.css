@@ -9,6 +9,30 @@
   --grey-color: #757575;
   --black-color: #000000;
   --address-link-color: rgba(255, 255, 255, 0.6);
+  --background-team-color: #f5f4fa;
+  --border-fon: #eeeeee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
 }
 
 .list {
@@ -19,17 +43,61 @@
   text-decoration: none;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 body {
   font-family: var(--main-font);
   color: var(--grey-color);
 }
 
 /* ============ HEADER ========== */
+.header {
+  border: 1px solid #ececec;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: 94px;
+}
+
+.menu-item + .menu-item {
+  margin-left: 50px;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
 .logo {
   color: var(--black-color);
 }
 
 .logo-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -39,6 +107,9 @@ body {
 }
 
 .menu-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -53,8 +124,13 @@ body {
 .menu-link:focus {
   color: var(--accent-color);
 }
-
+.header-contact-item + .header-contact-item {
+  margin-left: 50px;
+}
 .header-contact-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -84,8 +160,11 @@ body {
 
 /* ========== BANNER ========== */
 .banner {
+  padding: 200px 0;
+  text-align: center;
   background-color: var(--background-color);
 }
+
 .banner-title {
   font-weight: 900;
   font-size: 44px;
@@ -95,10 +174,15 @@ body {
   color: var(--white-color);
 }
 .modal-btn {
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  margin-top: 30px;
   cursor: pointer;
   background-color: var(--accent-color);
   color: var(--white-color);
@@ -111,7 +195,20 @@ body {
 /* ========== END BANNER ========== */
 
 /* ========== SKILLS ========== */
-
+.skills {
+  padding-top: 94px;
+}
+.skills-list {
+  margin-left: -30px;
+  margin-top: -30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills-list-item {
+  flex-basis: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-top: 30px;
+}
 .skills-list-title {
   font-weight: 700;
   font-size: 14px;
@@ -122,6 +219,7 @@ body {
 }
 
 .skills-list-suptitle {
+  margin-top: 10px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -130,25 +228,59 @@ body {
 /* ========== END SKILLS ========== */
 
 /* ========== PICTURES ========== */
+.pictures-list {
+  margin-left: -30px;
+  margin-top: -30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pictures-list-item {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+}
 .pictures-title {
+  text-align: center;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--title-color);
 }
+
 /* ========== END PICTURES ========== */
 
 /* ========== TEAM ========== */
+.team-list {
+  margin-left: -30px;
+  margin-top: -30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .team {
   background-color: var(--background-team-color);
 }
 .team-title {
+  text-align: center;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--title-color);
+}
+.team-list-item {
+  text-align: center;
+  flex-basis: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-top: 30px;
+  border-radius: 0px 0px 4px 4px;
+}
+.team-list-content {
+  padding: 30px 0;
+  background: var(--white-color);
 }
 .team-list-item-name {
   font-weight: 500;
@@ -158,6 +290,7 @@ body {
   color: var(--title-color);
 }
 .team-list-item-position {
+  margin-top: 10px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -166,7 +299,38 @@ body {
 /* ========== END TEAM ========== */
 
 /* ========== PORTFOLIO ========== */
+.portfolio-menu {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-menu-item + .portfolio-menu-item {
+  margin-left: 8px;
+}
+.portfolio-img {
+  display: flex;
+  margin-left: -30px;
+  margin-top: -30px;
+  flex-wrap: wrap;
+}
+.portfolio-img-item {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.portfolio-content {
+  padding: 24px 20px;
+  border: 1px solid var(--border-fon);
+  border-top: none;
+  background: var(--white-color);
+}
+
 .modal-button {
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
   background-color: var(--background-grey-color);
   font-weight: 500;
   font-size: 16px;
@@ -178,6 +342,8 @@ body {
 
 .modal-button:hover,
 .modal-button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   color: var(--white-color);
   background-color: var(--accent-color);
 }
@@ -199,6 +365,7 @@ body {
 
 /* ========== FOOTER ========== */
 .footer {
+  padding: 60px 0;
   background-color: var(--background-color);
 }
 .logo-fotter {
