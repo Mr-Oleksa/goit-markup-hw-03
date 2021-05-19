@@ -62,7 +62,7 @@ body {
 
 /* ============ HEADER ========== */
 .header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .header-container {
   display: flex;
@@ -96,14 +96,16 @@ body {
 
 .logo-link {
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+}
+.header-logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .menu-link {
@@ -159,6 +161,7 @@ body {
 }
 
 /* ========== BANNER ========== */
+
 .banner {
   padding: 200px 0;
   text-align: center;
@@ -166,6 +169,7 @@ body {
 }
 
 .banner-title {
+  max-width: 700px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -282,7 +286,7 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  padding: 30px 0;
+  padding: 30px 20px;
   background: var(--white-color);
 }
 .team-list-item-name {
@@ -358,6 +362,7 @@ body {
   color: var(--title-color);
 }
 .portfolio-text {
+  margin-top: 4px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -371,11 +376,12 @@ body {
   padding: 60px 0;
   background-color: var(--background-color);
 }
-.fotter-link {
-  padding: 60px 0 20px 0;
-}
+
 .logo-fotter {
   color: var(--white-color);
+}
+.address {
+  margin-top: 20px;
 }
 .address-list-item + .address-list-item {
   margin-top: 8px;
